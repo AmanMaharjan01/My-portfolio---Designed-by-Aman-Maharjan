@@ -11,24 +11,33 @@
   <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
   <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
   <title>AMan</title>
 </head> 
 <body>
 <div id="sidebar">
-		<img src="img/logo2.jpg" id="logo" title="Aman's logo">
-		<hr>
+	<div class="section-1">
+		<span id="hamburger">
+			<i class="fas fa-bars"></i>
+		</span>
+	</div>
+	<div class="section-2">	
 		<ul id="nav">
-			<li><a href="#mycontact"  id="contactme" onclick="contact()" >CONTACT</a></li>
-			<li><a href="#skills" id="myskills" onclick="skills()" >SKILLS</a></li>
-			<li><a href="#about" id="aboutme" onclick="about()" >ABOUT ME</a></li>
-			<li ><a href="#" id="home" onclick="home()">HOME</a></li>
-		</ul>
+		<li><a href="#mycontact"  id="contactme" onclick="contact()" >CONTACT</a></li>
+		<li><a href="#skills" id="myskills" onclick="skills()" >SKILLS</a></li>
+		<li><a href="#about" id="aboutme" onclick="about()" >ABOUT ME</a></li>
+		<li ><a href="#" id="home" onclick="home()">HOME</a></li>
+	</ul>
+</div>
+	<div class="section-3">
 		<ul id="slogo">
-			<a href="https://www.facebook.com/aman.baucha1"><li><img src="img/facebook.png"></a></li>
-			<a href="https://github.com/AmanMaharjan01"><li><img src="img/ghub.png"></a></li>
-			<a href=""><li><img src="img/skype.png"></a></li>
-			<a href="https://www.linkedin.com/in/aman-maharjan-a69330198/"><li><img src="img/linked.png"></a></li>
-		</ul>
+		<a href="https://www.facebook.com/aman.baucha1"><li><img src="img/facebook.png"></a></li>
+		<a href="https://github.com/AmanMaharjan01"><li><img src="img/ghub.png"></a></li>
+		<a href="https://www.linkedin.com/in/aman-maharjan-a69330198/"><li><img src="img/linked.png"></a></li>
+	</ul></div>
+		
+	
+		
  </div>
 
  <div id="contact">	
@@ -49,8 +58,7 @@
 	    		      <p id="hello">Hello</p>
 		              <span class="head">I'm Aman</span>
 		              <p id="about-me">
-		                I'm a Full stack developer, who has a passion on Web developing
-		                & designing.
+		                I'm a <span id="about-detail"></span>
 		              </p>
 	                  <a href="#mycontact" onclick="contact()"><button id="hire">Hire Me</button></a>
                </div>
@@ -94,22 +102,22 @@
 		<h1 data-aos="fade-right">Skills</h1>
 		<div class="row">
 			<section class="col-md-12 col-sm-12" id="title" data-aos="fade-right" data-aos-duration="700">
-				<p>Following are the knowledges i have regarding programming, web development and web Designing
+				<p>Following are the knowledges i have regarding programming, Web Development and Web Designing
 			</section>
 			<section class="col-md-12 col-sm-12" id="list" data-aos="fade-left" data-aos-duration="700">
 				<ul>
 					<li title="React Js"><img src="img/skills/react.png"></li>
+					<li title="Redux"><img src="img/skills/redux.png"></li>
+					<li title="Socket IO"><img src="img/skills/socket.png"></li>
+					<li title="Node js"><img src="img/skills/nodejs.png"></li>
 					<li title="Laravel"><img src="img/skills/lv.png"></li>
-					<li title="Html"><img src="img/skills/html.png"></li>
-					<li title="CSS"><img src="img/skills/css.png"></li>
-					<li title="JavaScript"><img src="img/skills/js.png"></li>
+					<li title="Html"><img src="img/skills/mui.png"></li>
+					<li title="Vue Js"><img src="img/skills/vue.png"></li>
+					<li title="TypeScript"><img src="img/skills/ts.png"></li>
 					<li title="C programming"><img src="img/skills/c.png"></li>
-					<li title="C++"><img src="img/skills/c++.png"></li>
-					<li title="Photoshop"><img src="img/skills/ps.png"></li>
-					<li title="Adobe XD"><img src="img/skills/xd.png"></li>
 				</ul>
 			</section>
-			<section class="col-md-12 col-sm-12" id="progress-bar">			
+			<!-- <section class="col-md-12 col-sm-12" id="progress-bar">			
  				<div id="pg">
  				<p data-aos="fade-right" data-aos-duration="700"><i class="fab fa-react"></i> React Js</p>
  				 <div class="progress" data-aos="fade-right" data-aos-duration="700">
@@ -133,9 +141,24 @@
 				 </div>
 				</div>
 			  
-			</section>
+			</section> -->
 		</div>
 	</div>
+</div>
+
+<div id="project">
+   <h1 data-aos="fade-up">Certificates</h1>
+   <section>
+		<img src="img/Certificate/es6.png" id="slider" />
+		<div class="row">
+		<ul class="navigation">
+			<li  onclick="videoUrl('img/Certificate/es6.png')"><img src="img/Certificate/es6.png"></li>
+			<li  onclick="videoUrl('img/Certificate/js.png')"><img src="img/Certificate/js.png"></li>
+			<li  onclick="videoUrl('img/Certificate/css.png')"><img src="img/Certificate/css.png"></li>
+			<li  onclick="videoUrl('img/Certificate/html.png')"><img src="img/Certificate/html.png"></li>
+		</ul>
+        </div>
+	</section>
 </div>
 
 <div id="mycontact">
@@ -161,7 +184,7 @@
 </div>
 
 <footer>
-	<p>© Designed By Aman Maharjan</p>
+	<p>© Designed By Aman Maharjan 2019</p>
 </footer>
 
 
