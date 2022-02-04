@@ -41,8 +41,8 @@ var typewriter = new Typewriter(app, {
 typewriter
   .typeString("Web Developer")
   .pauseFor(1800)
-  .deleteAll()
-  .typeString("Web Designer")
+  .deleteChars(8)
+  .typeString("Designer")
   .pauseFor(1800)
   .deleteAll()
   .typeString("Technology enthusiast")
