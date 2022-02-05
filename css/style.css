@@ -6,20 +6,24 @@
 body {
   margin: 0;
   padding: 0;
-  background: url("../img/background2.jpg") no-repeat;
+  height: 100%;
+  width: 100%;
   overflow-x: hidden;
 }
 
-main {
-  width: 100%;
-  min-height: 752px;
-  display: flex;
+.content-wrapper {
+  padding-left: 76px;
+}
+
+#intro {
+  background: url("../img/background2.jpg") no-repeat;
+  background-size: cover;
+  height: 100vh;
 }
 
 #sidebar {
   position: fixed;
   top: 0;
-  width: 85px;
   height: 100%;
   background-color: #1f1f1f;
   display: flex;
@@ -133,7 +137,6 @@ main {
 }
 
 #contact {
-  float: right;
   border: 2px solid #222222;
   width: 45px;
   height: 45px;
@@ -147,6 +150,7 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 }
 
 #contact #contact-me {
@@ -190,10 +194,6 @@ main {
 }
 
 /*Intro*/
-
-#intro {
-  width: 100%;
-}
 
 #intro .intro-content {
   width: 90%;
@@ -273,13 +273,12 @@ main {
 /*about*/
 
 #about {
-  width: 100%;
   min-height: 450px;
   background-color: #1d1d1d;
+  overflow: hidden;
 }
 
 #about .about-title {
-  width: 100%;
   margin-left: 750px;
 }
 
@@ -342,9 +341,9 @@ main {
 
 /*skills*/
 #skills {
-  width: 100%;
   min-height: 340px;
   background-color: #222222;
+  overflow: hidden;
 }
 
 #skills h1 {
@@ -423,9 +422,9 @@ main {
 /*Project*/
 
 #project {
-  width: 100%;
   min-height: 700px;
   background-color: #1d1d1d;
+  overflow: hidden;
 }
 
 h1 {
@@ -500,9 +499,9 @@ h1 {
 /* Contcat */
 
 #mycontact {
-  width: 100%;
   min-height: 600px;
   background-color: #222222;
+  overflow: hidden;
 }
 
 #mycontact h1 {
@@ -525,10 +524,6 @@ h1 {
 
 #mycontact .container section .content {
   display: inline-block;
-  position: relative;
-  top: 50%;
-  left: 55%;
-  transform: translate(-50%, -50%);
 }
 
 #mycontact .container section h1 {
@@ -562,7 +557,6 @@ h1 {
 }
 
 footer {
-  width: 100%;
   height: 5vh;
   background-color: #ff6666;
   text-align: center;
@@ -572,11 +566,15 @@ footer p {
   color: #fff;
   font-size: 15px;
   margin: 0;
-  padding: 0;
-  padding: 5px;
 }
 
 /*media queries*/
+
+@media all and (max-height: 650px) {
+  .section-1 {
+    display: none;
+  }
+}
 
 @media all and (min-width: 1050px) {
   header #contact {
