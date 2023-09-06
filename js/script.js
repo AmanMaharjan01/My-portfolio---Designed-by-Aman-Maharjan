@@ -1,5 +1,12 @@
 document.getElementById("home").setAttribute("class", "active");
 
+const menuIds = ["home", "aboutme", "myskills", "contactme"]
+
+let date = new Date();
+
+
+document.getElementById('current-year').innerHTML = date.getFullYear();
+
 function about() {
   document.getElementById("aboutme").setAttribute("class", "active");
   document.getElementById("home").removeAttribute("class");
@@ -26,6 +33,14 @@ function contact() {
   document.getElementById("home").removeAttribute("class");
   document.getElementById("myskills").removeAttribute("class");
   document.getElementById("contactme").setAttribute("class", "active");
+}
+
+function activeMobileMenu(menu) {
+  document.getElementById(`${menu}-mobile`).setAttribute("class", "active");
+  menuIds.filter(el => el !== menu)?.map(el => {
+    console.log(el)
+    document.getElementById(`${el}-mobile`).removeAttribute("class");
+  })
 }
 
 function videoUrl(video) {

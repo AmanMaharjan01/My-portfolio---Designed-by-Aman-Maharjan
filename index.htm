@@ -25,18 +25,18 @@
     <title>AMan</title>
   </head>
   <body>
-    <div id="sidebar">
+  <div id="sidebar">
 	<div class="section-1">
 		<img src="img/logo2.jpg" id="logo" alt="logo" class="logo"  >
 	</div>
-	<div class="section-2">	
-		<ul id="nav">
-		<li><a href="#mycontact"  id="contactme" onclick="contact()" >CONTACT</a></li>
-		<li><a href="#skills" id="myskills" onclick="skills()" >SKILLS</a></li>
-		<li><a href="#about" id="aboutme" onclick="about()" >ABOUT ME</a></li>
-		<li ><a href="#" id="home" onclick="home()">HOME</a></li>
-	</ul>
-</div>
+    <div class="section-2">	
+      <ul id="nav">
+      <li><a href="#mycontact"  id="contactme" onclick="contact()" >CONTACT</a></li>
+      <li><a href="#skills" id="myskills" onclick="skills()" >SKILLS</a></li>
+      <li><a href="#about" id="aboutme" onclick="about()" >ABOUT ME</a></li>
+      <li ><a href="#" id="home" onclick="home()" class="active">HOME</a></li>
+    </ul>
+  </div>
     <div class="section-3">
 		<ul id="slogo">
 		<a href="https://www.facebook.com/aman.baucha1"><li><img src="img/facebook.png"></a></li>
@@ -44,14 +44,23 @@
 		<a href="https://www.linkedin.com/in/aman-maharjan-a69330198/"><li><img src="img/linked.png"></a></li>
 	</ul></div> 
 
-    </div> 
+  </div> 
 
-    <div id="contact">	
-	<div id="contact-me">
-	  <span id="icon"><i class="fas fa-phone"></i></span>
-	  <a href="#mycontact" onclick="contact()" style="text-decoration: none;"><span id="text">Call Me</span></a>
-   </div>
+  <div class="mobile-nav">
+    <div class="mobile-menu-wrapper">
+      <a href="#" id="home-mobile" onclick="activeMobileMenu('home')" class="active"><i class="fas fa-home"></i></a>
+      <a href="#about" id="aboutme-mobile" onclick="activeMobileMenu('aboutme')"><i class="fas fa-id-card"></i></a>
+      <a href="#skills" id="myskills-mobile" onclick="activeMobileMenu('myskills')"><i class="fas fa-laptop"></i></a>
+      <a href="#mycontact" id="contactme-mobile" onclick="activeMobileMenu('contactme')"><i class="fas fa-street-view"></i></a>
     </div>
+  </div>
+
+  <div id="contact">	
+    <div id="contact-me">
+      <span id="icon"><i class="fas fa-phone"></i></span>
+      <a href="#mycontact" onclick="contact()" style="text-decoration: none;"><span id="text">Call Me</span></a>
+    </div>
+  </div>
 
     <!--line-->
     <img src="img/m-logo2.png" id="mid-logo" title="Aman's logo" />
@@ -67,10 +76,13 @@
 		                I'm a <span id="about-detail"></span>
 		              </p>
 	                  <a href="#mycontact" onclick="contact()"><button id="hire">Hire Me</button></a>
+	                  <a href="https://drive.google.com/file/d/1u9tNWMEXshg-wqEbrmqK3xa8fQZZDZcM/view?usp=sharing" target="_blank"><button id="resume">My Resume <i class="fas fa-external-link-alt"></i></button></a>
                </div>
     	    </section>
-    	    <section class="intro-img" data-aos="zoom-in-left" data-aos-duration="600">
-    	    	<img src="img/me.jpg" id="me" title="My Picture">
+    	    <section class="d-flex justify-content-center align-items-center">
+            <div class="intro-img" data-aos="zoom-in-left" data-aos-duration="600">
+              <img src="img/gg.jpg" id="me" title="My Picture">
+             </div>
 			</section>
     	</div>
     </div>
@@ -81,14 +93,14 @@
         <div id="container">
           <div class="row">
             <section
-              class="col-md-6"
+              class="col-sm-12 col-md-12 col-lg-6"
               data-aos="fade-right"
               data-aos-duration="600"
             >
               <img src="img/aboutme.jpg" id="about-img" />
             </section>
             <section
-              class="col-md-6"
+              class="col-sm-12 col-md-12 col-lg-6 description"
               data-aos="fade-left"
               data-aos-duration="700"
             >
@@ -96,19 +108,13 @@
               <br />
               <span>Full stack developer</span>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-                sunt in culpa qui officia deserunt mollit anim id est laborum.
+                Motivated web developer with 3 years of experience creating and maintaining dynamic
+                websites. Skilled in web development and its various frameworks. Passionate about delivering
+                exceptional user experiences and collaborating with cross-functional teams to meet project
+                objectives.
               </p>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat.
+                Enthusiasm is the driving force that propels me forward in my journey as a developer. With a heart full of curiosity and a mind open to new challenges, I dive into each project with unwavering excitement. The thrill of problem-solving and the joy of creating something from scratch fuel my determination to excel in the world of development.
               </p>
             </section>
           </div>
@@ -208,7 +214,7 @@
 		     	<p>+977-9860462244</p>
 		     	<p>Email: maharjan06@gmail.com</p>
 		     	<p>Github: https://github.com/AmanMaharjan01</p>
-		     	<a href="https://www.gmail.com"><button>MAIL ME</button></a>
+		     	<a href="mailto:maharjan06@gmail.com"><button>MAIL ME</button></a>
 		        </div>
 		     </section>
 		</div>
@@ -217,7 +223,7 @@
     </div>
 
     <footer>
-      <p>© Designed By Aman Maharjan 2019</p>
+      <p class="footer-text">© Designed By Aman Maharjan <span id="current-year" style="margin-left: 5px;"></span></p>
     </footer>
     </div>
     <!---Script src--->
